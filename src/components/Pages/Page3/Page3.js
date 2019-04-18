@@ -22,7 +22,7 @@ class Page3 extends React.Component{
     }
 
     componentDidMount=()=>{
-        console.log('third page mounted');
+        
         this.props.allowAnimation();
         this.entryEventHandler();
         
@@ -32,11 +32,11 @@ class Page3 extends React.Component{
         this.thirdPageTween
         .delay(0.5)
         .fromTo(this.headingElememnt,1.5,{opacity:0,y: -10},{opacity:1,y:0})
-        .fromTo(this.imageElement,0.75,{opacity:0,x: 10},{opacity:1,x:0})
+        .fromTo(this.imageElement,0.75,{opacity:0,x: 10},{opacity:1,x:0},'-=0.5')
 
-        .fromTo(this.para1,1,{opacity:0,x: -10},{opacity:1,x:0,delay:0.5})
-        .fromTo(this.para2,2,{opacity:0,x: -10},{opacity:1,x:0,delay:3})
-        .fromTo(this.para3,2,{opacity:0,x: -10},{opacity:1,x:0,delay:3})
+        .fromTo(this.para1,1,{opacity:0,x: -10},{opacity:1,x:0,delay:0.5},'-=1')
+        .fromTo(this.para2,2,{opacity:0,x: -10},{opacity:1,x:0,delay:2})
+        .fromTo(this.para3,2,{opacity:0,x: -10},{opacity:1,x:0,delay:2})
        .play();
        this.thirdPageTween.eventCallback("onComplete",this.props.allowScrollEvent);
        
@@ -71,7 +71,7 @@ Your walk your dog, you have breakfast and you don't feel sad or lonely anymore.
         
     </div>
     <div  ref={div => this.imageElement = div} className={classes.rightPageSection}>
-           <img src="./thirdPageAsset1.svg"/>
+           <img src="./thirdPageAsset1.svg" alt="sad girl feeling depressed"/>
     </div>
    
     </div>

@@ -39,3 +39,19 @@
     align-items: center;
     height: 100%;
 }
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    .page8Container{
+        width: 90vw;
+        margin-left: 30px;
+    }
+    .headingContainer{
+        text-align: center;
+        width: 50%;
+    }
+    .paragraph{
+        width: 90%;
+    }
+  }

@@ -25,7 +25,7 @@ class Page6 extends React.Component{
     }
 
     componentDidMount=()=>{
-        console.log('page6 page mounted');
+       
         this.props.allowAnimation();
         this.entryEventHandler();
 
@@ -97,7 +97,7 @@ Numbers
         
     </div>
     <div ref={div => this.imgEl = div} className={classes.rightPageSection}>
-           <img src="./statsImage.svg"/>
+           <img src="./statsImage.svg" alt="rotating globe showing stats"/>
     </div>
    
     </div>

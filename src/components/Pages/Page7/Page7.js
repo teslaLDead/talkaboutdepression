@@ -25,7 +25,7 @@ class Page7 extends React.Component{
     }
 
     componentDidMount=()=>{
-        console.log('page7 page mounted');
+     
         this.props.allowAnimation();
         this.entryEventHandler();
 
@@ -96,7 +96,7 @@ We Treat It?
         
     </div>
     <div  ref={div => this.imgEl = div} className={classes.rightPageSection}>
-           <img src="./treatDepression.svg"/>
+           <img src="./treatDepression.svg" alt="supporting person sitting on chait"/>
     </div>
    
     </div>

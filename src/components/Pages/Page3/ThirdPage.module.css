@@ -72,3 +72,18 @@
         font-size: 14px;
     }
   }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+  
+    .rightPageSection{
+        display: none;
+    }
+
+    .paragraph{
+        width: 100%;
+    }
+    .headingContainer{
+        width: 100%;
+    }
+    
+  }

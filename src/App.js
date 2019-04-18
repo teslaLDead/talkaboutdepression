@@ -9,12 +9,16 @@ import Page5 from './components/Pages/Page5/Page5';
 import Page6 from './components/Pages/Page6/Page6';
 import Page7 from './components/Pages/Page7/Page7';
 import Page8 from './components/Pages/Page8/Page8';
-
+import Swipe from 'react-easy-swipe';
 
 class App extends Component {
   constructor(props){
     super(props);
     this.customPointer=null;
+
+
+   
+
   }
   state={
     pageNumber:1,
@@ -46,7 +50,7 @@ class App extends Component {
 
   
   navClickEventHandler=(pg)=>{
-    console.log('trying to change pag number to '+pg);
+   
     this.setState({
       pageNumber:pg,
       allowScroll:false
@@ -76,6 +80,27 @@ class App extends Component {
       }));
     }}
   
+  }
+
+  moveDown=()=>{
+//when scroll is Down
+
+if(this.state.allowScroll && this.state.pageNumber<8)
+this.setState((state)=>({
+  pageNumber:++state.pageNumber,
+  allowScroll:false,
+  allowPageChange:false
+ }));
+  }
+
+  moveUp=()=>{
+    //when scroll is UP
+    if(this.state.allowScroll && this.state.pageNumber>1)
+    this.setState((state,props)=>({
+      pageNumber:--state.pageNumber,
+      allowScroll:false,
+      allowPageChange:false
+    }));
   }
 
   allowAnimation=()=>{
@@ -204,12 +229,26 @@ class App extends Component {
         color:'#191919'
       }
     }
+
+    if(this.state.pageNumber===8)
+    bottomNavStyle={
+      opacity:'0'
+    }
+
+    const style123={
+      height:'100%'
+    }
+
+    
+
  
   
   
    
 
     return (
+      <Swipe style={style123} onSwipeUp={this.moveDown} onSwipeDown={this.moveUp}>
+    
       <div className="App" onWheel={this.mouseWheelHandler} >
  
        <div style={overlayBackColor} className="overlayBack">
@@ -220,10 +259,12 @@ class App extends Component {
         
         
         <div style={bottomNavStyle} className="rightBottomNav">
-          <span className="skipButton" onClick={this.skipAnimation}>Skip</span>
+          <span className="skipButton" onClick={this.skipAnimation}>Skip Animation</span>
         </div>
        </div>
       </div>
+      
+      </Swipe>
     );
   }
 }

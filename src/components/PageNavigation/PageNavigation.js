@@ -9,7 +9,7 @@ class PageNavigation extends React.Component{
 
     render(){
 
-        let linkColorStyle=null;
+      
         let scrollIndication=null;
       
         const link1Classes=classNames({

@@ -34,6 +34,13 @@
 }
 
 .active p{
-
     cursor: pointer;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+ .leftBar{
+     left: 0;
+ }
+    
+  }

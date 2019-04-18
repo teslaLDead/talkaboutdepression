@@ -1,5 +1,9 @@
 import React from 'react';
+import {
+    BrowserView,
+    MobileView,
 
+  } from "react-device-detect";
 class ScrollIndication extends React.Component{
     
 
@@ -25,13 +29,24 @@ render(){
     
     return(
     <div style={this.props.style} className="scrollIndicator"> 
-        <p style={paraStyle}>Scroll</p>
-    <div className="scrollAnimationContainer" >
+        <BrowserView><p style={paraStyle}>Scroll</p>
+        <div className="scrollAnimationContainer" >
         
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.75 32.5" >
 
 <g ><g ><rect style={rectStyle}width="2.75" height="60px"/></g></g></svg>
     </div>
+        </BrowserView>
+        <MobileView>
+            <p style={paraStyle}>Swipe</p>
+            <div className="swipeAnimationContainer" >
+        
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.75 32.5" >
+
+<g ><g ><rect style={rectStyle}width="2.75" height="60px"/></g></g></svg>
+    </div>
+        </MobileView>
+    
     </div>
 )}
 }

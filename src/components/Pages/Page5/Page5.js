@@ -30,7 +30,7 @@ class Page5 extends React.Component{
     }
 
     componentDidMount=()=>{
-        console.log('fifth page mounted');
+      
         this.props.allowAnimation();
         this.entryEventHandler();
 
@@ -52,7 +52,7 @@ class Page5 extends React.Component{
         this.fifthPageTween
         .delay(0.5)
         .fromTo(this.headingElememnt,1.3,{opacity:0,y: -10},{opacity:1,y:0})
-        .to(this.imageEl1,1,{opacity:1,x: -10})
+        .to(this.imageEl1,1,{opacity:1,x: -10},'=-1')
         .fromTo(this.para1,1,{opacity:0,x: -10},{opacity:1,x:0,delay:0.5})
         
       
@@ -62,14 +62,14 @@ class Page5 extends React.Component{
         .to(this.imageEl1,1,{opacity:0,x: 20})
         .to(this.imageEl2,1,{opacity:1,x: -10})
         
-        .fromTo(this.para4,1,{opacity:0,x: -10},{opacity:1,x:0,delay:1})
+        .fromTo(this.para4,1,{opacity:0,x: -10},{opacity:1,x:0,delay:1},'=-1.5')
      
-        .fromTo(this.para5,1,{opacity:0,x: -10},{opacity:1,x:0,delay:1})
+        .fromTo(this.para5,1,{opacity:0,x: -10},{opacity:1,x:0,delay:1.5})
         .to(this.imageEl2,1,{opacity:0,x: 10})
         .to(this.imageEl3,1,{opacity:1,x: -10})
        
       
-        .fromTo(this.para6,1,{opacity:0,x: -10},{opacity:1,x:0,delay:0.25})
+        .fromTo(this.para6,1,{opacity:0,x: -10},{opacity:1,x:0,delay:0.25},'=-2')
         
         
         .fromTo(this.para7,1,{opacity:0,x: -10},{opacity:1,x:0,delay:1})
@@ -135,9 +135,9 @@ class Page5 extends React.Component{
         
     </div>
     <div  className={classes.rightPageSection}>
-           <img ref={img => this.imageEl1 = img} src="./5thAsset3.svg"/>
-           <img ref={img => this.imageEl2 = img} src="./5thAsset1.svg"/>
-           <img ref={img => this.imageEl3 = img} src="./5thAsset2.svg"/>
+           <img ref={img => this.imageEl1 = img} src="./5thAsset3.svg" alt="guy alone in mountains"/>
+           <img ref={img => this.imageEl2 = img} src="./5thAsset1.svg" alt="girl sleeping alone "/>
+           <img ref={img => this.imageEl3 = img} src="./5thAsset2.svg " alt="girl not able to concentrate "/>
     </div>
    
     </div>

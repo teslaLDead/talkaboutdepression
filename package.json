@@ -6,16 +6,17 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gh-pages": "^2.0.1",
+    "gsap": "^2.1.2",
     "react": "^16.8.6",
+    "react-device-detect": "^1.6.2",
     "react-dom": "^16.8.6",
+    "react-easy-swipe": "0.0.17",
     "react-scripts": "2.1.8"
   },
-  "scripts": { 
+  "scripts": {
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    
-
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

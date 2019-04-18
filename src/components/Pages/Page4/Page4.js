@@ -24,7 +24,7 @@ class Page4 extends React.Component{
     }
 
     componentDidMount=()=>{
-        console.log('FOURTH page mounted');
+       
         this.props.allowAnimation();
         this.entryEventHandler();
     }
@@ -33,10 +33,10 @@ class Page4 extends React.Component{
         this.fourthPageTween
         .delay(0.5)
         .fromTo(this.headingElememnt,1,{opacity:0,y: -10},{opacity:1,y:0})
-        .fromTo(this.imageElement,1,{opacity:0,x: 20},{opacity:1,x:0})
-        .fromTo(this.para1,1,{opacity:0,x: -10},{opacity:1,x:0,delay:0.5})
-        .fromTo(this.para2,2,{opacity:0,x: -10},{opacity:1,x:0,delay:2})
-        .fromTo(this.para3,2,{opacity:0,x: -10},{opacity:1,x:0,delay:2})
+        .fromTo(this.imageElement,1,{opacity:0,x: 20},{opacity:1,x:0},'-=0.25')
+        .fromTo(this.para1,1,{opacity:0,x: -10},{opacity:1,x:0,delay:0.5},'-=0.5')
+        .fromTo(this.para2,2,{opacity:0,x: -10},{opacity:1,x:0,delay:1.75})
+        .fromTo(this.para3,1,{opacity:0,x: -10},{opacity:1,x:0,delay:1})
         .fromTo(this.para4,2,{opacity:0,x: -10},{opacity:1,x:0,delay:1})
        .play();
        this.fourthPageTween.eventCallback("onComplete",this.props.allowScrollEvent);
@@ -79,7 +79,7 @@ class Page4 extends React.Component{
         
     </div>
     <div ref={div => this.imageElement = div} className={classes.rightPageSection}>
-           <img src="./farmer-alone depressed.svg"/>
+           <img src="./farmer-alone depressed.svg" alt="girl alone"/>
     </div>
    
     </div>

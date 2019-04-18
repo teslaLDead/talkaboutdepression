@@ -20,7 +20,7 @@ class Page8 extends React.Component{
     }
 
     componentDidMount=()=>{
-        console.log('page7 page mounted');
+    
         this.props.allowAnimation();
         this.entryEventHandler();
 
@@ -69,7 +69,18 @@ class Page8 extends React.Component{
         <p>Just by starting a conversation and spreading the message you can make a big difference in the lives of many souls.</p>
     </div>
     <div ref={div => this.para2 = div}>
-        <button className={classes.button}>Share.</button>
+        <button className={classes.button} onClick={
+            _=>{
+                const el = document.createElement('textarea');
+  el.value = window.location;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  alert('Copied the link: '+el.value)
+  document.body.removeChild(el);
+
+            }
+        }>Share.</button>
     </div>
         
         

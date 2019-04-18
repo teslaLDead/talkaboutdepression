@@ -21,7 +21,7 @@ class Page1 extends React.Component{
     }
 
     componentDidMount=()=>{
-        console.log('first page mounted');
+      
         this.props.allowAnimation();
         this.entryEventHandler();
 

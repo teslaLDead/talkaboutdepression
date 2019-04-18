@@ -70,17 +70,20 @@
 }
 .skipButton{
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 
-.scrollAnimationContainer{
+.scrollAnimationContainer,.swipeAnimationContainer{
   margin-top:30px; 
  
   height:60px;
-        width:50px;
+       
         overflow: hidden;
 }
+
+
 
 .scrollAnimationContainer > svg{
   width: 2.5px;
@@ -90,6 +93,25 @@
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
   
+}
+
+.swipeAnimationContainer > svg{
+  width: 2.5px;
+  height: 60px;
+  animation-name: swipeAnimtion;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  
+}
+
+@keyframes swipeAnimtion{
+  0%{
+    transform: translateY(100%)
+  }
+  100%{
+    transform: translateY(-100%)
+  }
 }
 
 @keyframes scrollingAnimation{
@@ -198,5 +220,34 @@ line-height: 90px;
     font-size: 80px;
 
     line-height: 75px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .mainHeading {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 52px;
+}
+
+.rightBottomNav {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.leftPageSection{
+  margin-left: 70px;
+  margin-top: 50px;
+  width: 80vw;
+}
+
+#secondPage h1{
+  color: #042d3c;
+  line-height: 50px;
+  }
+
+  p{
+    font-size: 15px;
   }
 }
