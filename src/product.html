@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Product</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                margin:0;
+                padding: 0; 
+                font-family: Roboto;
+            }
+            ul{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            #productList{
+                display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    background: #ababab;
+    align-items: center;
+
+            }
+            .productHeader{
+              
+                padding: 10px;
+    border-bottom: 2px solid #ebeff2;
+            }
+            .productAnalyticsBody{
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .productTitle{
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .productReviewCount{
+                color: #186fe7;
+                font-size: 15px;
+                font-weight: 600;
+            }
+            .lastReviewDate,.productSourceInfo span{
+                font-size: 13px;
+                color: #888888
+            }
+            .productContainer{
+         
+                max-width: 500px;
+    background: white;
+    padding: 10px;
+    margin: 15px 0px;
+}
+            
+            .productHeading{
+              
+                display: flex;
+            }
+            .productReviewInfo{
+                margin: 5px 0px;
+            }
+            .productReviewInfo span{
+               margin-right: 20px;
+            }
+            .productSourceInfo span{
+                margin: 0px 5px;
+            }
+            
+            .productSourceInfo >span:nth-child(1){
+                margin-left:0px; 
+            }
+            .infoTitle{
+                font-size: 13px;
+                font-weight: 300;
+                color: #888888;
+                text-transform: uppercase;
+                margin: 8px 0px;
+            }
+            .topTopicsList li{
+                display: flex;
+    
+    justify-content: space-between;
+    border-bottom: 2px solid #f9f6f6;
+    padding: 7.5px 1px;
+            }
+            .productTopTopics{
+                width: calc(90% - 50px);
+                padding-right: 50px; 
+            }
+            .productImage{
+                max-width: 105px;
+            }
+            .topicName{
+                font-size: 14px;
+                color: #252424;
+            }
+            .productPrice{
+                font-size: 13px;
+                margin-bottom: 30px;
+           
+            }
+            .productRelatedInfo{
+                width: calc(40% - 10px);
+                font-size: 13px;
+            }
+            .productRelatedInfo li{
+                margin: 10px 0px;
+                color: #504f4f;
+
+            }
+            .productMoreInfo{
+                display: none;
+            }
+            .showLess{
+                display: none;
+            }
+            .showMore{
+                display: block;
+            }
+            .topicRating{
+                
+    padding: 8px;
+    color: #1b1b1b;
+    font-weight: bold;
+    border-radius: 5px;
+            }
+            .bgGreen{
+                color: #0bbd0b;
+            }
+            .bgRed{
+                color: #f36161;
+            }
+            .topicName{
+                font-size: 16px;
+    color: #191818;
+    display: flex;
+   
+    align-items: center;
+            }
+            .opacityNone{
+                opacity: 0;
+            }
+            .prodInfo{
+                cursor: pointer;
+            }
+            .productSourceInfo a{
+                color: #5393f7;
+            }
+            .productTitleInfo{
+                display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 15px;
+}
+            
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="productList">
+        <div class="productContainer">
+            <div class="productHeader">
+                
+                <div class="productHeading">
+                        <div class="productImage">
+                                <figure>
+                                    <img src="./product image.png" alt="" />
+                                    <!-- <figcaption>dasdasd</figcaption> -->
+                                </figure>
+                            </div>
+                            <div class="productTitleInfo">
+                        <h4 class="productTitle">JBL GO Portable Wireless Bluetooth Speaker with Mic (Black) </h4>
+                        <p class="productSourceInfo"><span>Category: Bluetooth Speakers</span><span>|</span><span>Domain: <a href="amazon.in">amazon.in</a></span></p>
+                    </div>
+                </div>
+                <p class="productReviewInfo"><span class="productReviewCount">3012 reviews</span> <span class="lastReviewDate">Last Review At: 21 Oct, 2018</span></p>
+            </div>
+            <div class="productAnalyticsBody">
+                <div class="productTopTopics">
+                    <p class="infoTitle">
+                    TOP SCORES OUT OF 5
+                    </p>
+                    <ul class="topTopicsList">
+                        <li><p class="topicName"><span ></span>Battery Backup</p><p class="topicRating bgGreen">4.6</p></li>
+                        <li><p class="topicName">Battery Backup</p><p class="topicRating bgRed">2.1</p></li>
+                        <li><p class="topicName">Battery Backup</p><p class="topicRating bgGreen">4.6</p></li>
+                    </ul>
+                </div>
+                <div class="productRelatedInfo"> 
+                   
+                            <p class="infoTitle prodInfo">product info +</p>
+                               <ul class="opacityNone">
+                                    <li><span class="infoTitle">M.R.P:</span> Rs. 1700</li>
+                                    
+                                            <li><span class="infoTitle">Product id:</span> ABVSADF12</li>
+                                            <li><span class="infoTitle">CREATED AT:</span> DATE</li>
+                                 
+                                  
+                                  
+                               </ul>
+                                      
+                                    
+                    
+                   
+                    
+                   
+
+                </div>
+            </div>
+        </div>
+
+      
+        
+    </div>
+    <script>
+        document.addEventListener('click',function(e){
+            e=e|| window.event;
+            var target= e.target || e.srcElement;
+            console.log(target.innerHTML )
+            if(target.className=="infoTitle prodInfo" && target.innerHTML==="product info +"){   
+                
+                target.innerHTML="product info -";
+                target.nextElementSibling.classList.toggle("opacityNone");
+            }
+            else if(target.className=="infoTitle prodInfo" && target.innerHTML==="product info -"){
+                target.innerHTML="product info +";
+                target.nextElementSibling.classList.toggle("opacityNone");
+            }
+            // console.log(target.className)
+            
+        },false)
+        </script>
+        
+        <!-- <script src="" async defer></script> -->
+     
+    </body>
+</html>

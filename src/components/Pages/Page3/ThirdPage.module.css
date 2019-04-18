@@ -1,0 +1,74 @@
+.headingContainer {
+    width: 600px;
+    text-align: left;
+}
+
+.paragraph {
+    text-align: left;
+    margin: 60px 0px;
+    width: 450px;
+    color: white;
+    font-size: 16px;
+}
+
+.mainHeading h1 {
+    color: white;
+}
+
+.mark {
+    background: white;
+    color: red;
+    padding: 0px 3px;
+    font-weight: 400;
+}
+
+.rightSection {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    /* background-image: url(/static/media/asset1-what-idepression.3c5a52a1.png); */
+}
+
+.cls1 {
+
+    stroke: #03202a;
+    stroke-width: 1px;
+    fill-rule: evenodd;
+    /* background-image:url('./AppBackground.gif'); */
+
+}
+
+.static {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    border-radius: 300px;
+    top: -100px;
+    right: -100px;
+    /* background-image:url('./AppBackground.gif'); */
+    overflow: hidden;
+}
+
+.staticOverlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(183, 180, 180, 0.53);
+}
+
+.rightPageSection{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 1025px) and (max-width: 1440px){
+    .rightPageSection{
+        position: absolute;
+        right: 0;
+    }
+    p{
+        font-size: 14px;
+    }
+  }

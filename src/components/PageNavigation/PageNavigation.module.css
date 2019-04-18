@@ -1,0 +1,39 @@
+.leftBar{
+    position: fixed;
+    height: 100%;
+    left: 30px;
+    width: 100px;
+    transition: all 2s ease-in-out;
+  
+}
+
+.pageNavContainer{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pageNavs{
+    margin-right: 30px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pageLinks p{
+    cursor: pointer;
+    font-size: 14px;
+
+    font-weight: 500;
+    animation: all 0.5s ease; 
+}
+
+.active p{
+
+    cursor: pointer;
+}

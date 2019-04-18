@@ -1,0 +1,202 @@
+.App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image:url("./AppBackground.gif");
+  /* cursor: none; */
+}
+
+.overlayBack{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  transition:all 1s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.mainHeading{
+  font-size: 100px;
+  font-weight: 800;
+  
+  line-height: 95px;
+}
+
+.mainHeading span{
+  text-align: left;
+}
+
+
+.mainHeading span::selection{
+  color: red;
+  background: none;
+}
+
+.para{
+  font-size: 16px;
+  color: white;
+
+}
+
+.para::selection{
+  color: red;
+  background: none;
+}
+
+.para span::selection{
+  color: red;
+  background: none;
+}
+
+.scrollIndicator{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  transition: all 1s ease-in-out;
+}
+
+.scrollIndicator p{
+  font-size: 14px;
+  /* font-weight: 300; */
+  letter-spacing: 5px;
+  transition: all 0.5s ease-in-out;
+  cursor: default;
+  
+}
+.scrollIndicator p::selection{
+  background: none;
+}
+.skipButton{
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.scrollAnimationContainer{
+  margin-top:30px; 
+ 
+  height:60px;
+        width:50px;
+        overflow: hidden;
+}
+
+.scrollAnimationContainer > svg{
+  width: 2.5px;
+  height: 60px;
+  animation-name: scrollingAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  
+}
+
+@keyframes scrollingAnimation{
+  0%{
+    transform: translateY(-100%)
+  }
+  100%{
+    transform: translateY(100%)
+  }
+}
+
+
+
+.d-flex{
+  display: flex;
+}
+.d-column{
+  flex-direction: column;
+}
+.justify-center{
+  justify-content: center;
+}
+
+.highlight-white{
+  background: white;
+  color: #181818;
+  padding: 5px 5px 18px 5px;
+}
+
+.h-90{
+  height: 90%;
+}
+
+.f-align-center{
+  align-items: center;
+}
+
+
+.pageContainer{
+  width: 100%;
+  height: 100%;
+}
+
+
+.leftPageSection{
+  margin-left:180px;
+  margin-top:120px;
+  width: 50%;
+}
+
+#secondPage h1{
+color: #042d3c;
+line-height: 90px;
+}
+
+.darkNav{
+  color:#efe8e8;
+}
+.lighNav{
+  color:#5d5c5c;
+}
+.activeLinkLight{
+  border-bottom: 3px solid #777575;
+}
+.activeLinkDark{
+  border-bottom: 3px solid #dadada;
+}
+
+#customCursor{
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  z-index: 2;
+  border: 3px solid red;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  /* transition: all 0.09s ease-in-out; */
+
+}
+
+.rightBottomNav{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.rightBottomNav span{
+  margin: 0px 20px;
+}
+
+.rightBottomNav a{
+  text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: inherit;
+    font-weight: lighter;
+}
+
+@media (min-width: 1025px) and (max-width: 1440px){
+  .leftPageSection{
+    margin-top: 60px;
+  }
+
+  .mainHeading , #secondPage h1{
+    font-size: 80px;
+
+    line-height: 75px;
+  }
+}
