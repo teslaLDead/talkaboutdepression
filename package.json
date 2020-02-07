@@ -2,10 +2,8 @@
   "name": "dep",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://teslaldead.github.io/react-greensock",
   "dependencies": {
     "classnames": "^2.2.6",
-    "gh-pages": "^2.0.1",
     "gsap": "^2.1.2",
     "react": "^16.8.6",
     "react-device-detect": "^1.6.2",
@@ -15,7 +13,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
