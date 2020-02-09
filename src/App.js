@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PageNavigation from './components/PageNavigation/PageNavigation';
+import ReactCursorPosition , { INTERACTIONS } from 'react-cursor-position';
+import PositionLabel from './components/PositionLabel';
 import './App.css';
 import Page1 from './components/Pages/Page1/Page1';
 import Page2 from './components/Pages/Page2/Page2';
@@ -247,10 +249,14 @@ this.setState((state)=>({
    
 
     return (
+      
       <Swipe style={style123} onSwipeUp={this.moveDown} onSwipeDown={this.moveUp}>
     
       <div className="App" onWheel={this.mouseWheelHandler} >
- 
+      <ReactCursorPosition
+      activationInteractionMouse={INTERACTIONS.HOVER}>
+      <PositionLabel />
+     
        <div style={overlayBackColor} className="overlayBack">
         <PageNavigation stopAnimation={this.skipAnimation} theme={theme} navClickEventHandler={this.navClickEventHandler} style={navStyle} allowScroll={this.state.allowScroll} pageNumber={this.state.pageNumber}/>
         {page}
@@ -262,9 +268,11 @@ this.setState((state)=>({
           <span className="skipButton" onClick={this.skipAnimation}>Skip Animation</span>
         </div>
        </div>
+       </ReactCursorPosition>
       </div>
       
       </Swipe>
+      
     );
   }
 }

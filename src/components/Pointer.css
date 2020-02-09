@@ -1,0 +1,28 @@
+#mousePointer{
+    height:40px;
+    width:40px;
+    background:#ffffff6e;
+    position:absolute;
+    animation: pointer infinite 5s ease-in-out;
+    z-index: 5;
+    transition: all 0.01s ease-out;
+    transform: translate(-20px,-20px);
+    
+}
+
+@keyframes pointer{
+
+    0%,100%{
+        border-radius: 50px 62px;
+    }
+    
+    20%,70%{
+        border-radius: 55px 43px;
+    }
+
+    50%{
+        border-radius: 40px 45px;
+    }
+
+    
+}
