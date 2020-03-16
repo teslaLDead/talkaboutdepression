@@ -19,7 +19,7 @@
     background: white;
     color: red;
     padding: 0px 3px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .rightSection {
@@ -69,7 +69,7 @@
         right: 0;
     }
     p{
-        font-size: 14px;
+        font-size: 15px;
     }
   }
 
