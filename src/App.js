@@ -253,8 +253,8 @@ this.setState((state)=>({
       <Swipe style={style123} onSwipeUp={this.moveDown} onSwipeDown={this.moveUp}>
     
       <div className="App" onWheel={this.mouseWheelHandler} >
-      <ReactCursorPosition
-      activationInteractionMouse={INTERACTIONS.HOVER}>
+      {/* <ReactCursorPosition
+      activationInteractionMouse={INTERACTIONS.HOVER}> */}
       <PositionLabel />
      
        <div style={overlayBackColor} className="overlayBack">
@@ -268,7 +268,7 @@ this.setState((state)=>({
           <span className="skipButton" onClick={this.skipAnimation}>Skip Animation</span>
         </div>
        </div>
-       </ReactCursorPosition>
+       {/* </ReactCursorPosition> */}
       </div>
       
       </Swipe>
