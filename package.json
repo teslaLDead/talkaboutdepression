@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
-    "gsap": "^2.1.2",
+    "gsap": "^3.6.0",
     "react": "^16.8.6",
     "react-cursor-position": "^3.0.3",
     "react-device-detect": "^1.6.2",
